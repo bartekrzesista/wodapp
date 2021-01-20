@@ -1,13 +1,21 @@
 @import "~normalize.css";
-
-@import "_variables";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap");
 @import "modules/hello.scss";
 
 body {
-  background: $wtf;
+  background-color: #3767AD;
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main {
+  max-width: 375px;
+  min-height: 812px;/////////////////////////////???
+
+  &__heading {
+    font-size: 55px;
+    font-weight: 500px;
+    text-align: center;
+    line-height: 64px;
+  }
 }
