@@ -1,12 +1,12 @@
 {
-  "name": "WTF: PWA",
-  "short_name": "WTF: PWA",
-  "theme_color": "#2D2241",
-  "background_color": "#2D2241",
+  "name": "Wodapp",
+  "short_name": "Wodapp",
+  "theme_color": "#246EB9",
+  "background_color": "#246EB9",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/wtf-webpack-starter/",
-  "start_url": "/wtf-webpack-starter/",
+  "scope": "/wodapp/",
+  "start_url": "/wodapp/",
   "icons": [
     {
       "src": "pwa/manifest-icon-192.png",
