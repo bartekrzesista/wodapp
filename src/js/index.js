@@ -8,7 +8,6 @@ const addBtn = document.querySelector(".main__btn-add");
 const deleteBtn = document.querySelector(".main__btn-delete");
 
 let counterCurrentValue = 0;
-counter.innerHTML = counterCurrentValue;
 
 let date = new Date().toLocaleString("pl-PL");
 const key = date.slice(0, 10);
@@ -17,7 +16,8 @@ if(localStorage.getItem(key) == false) {
     localStorage.setItem(key, 0);
 }
 else {
-    counter.innerHTML = localStorage.getItem(key);
+    counterCurrentValue = localStorage.getItem(key);
+    counter.innerHTML = counterCurrentValue;
 }
 
 addBtn.addEventListener("click", () => {
