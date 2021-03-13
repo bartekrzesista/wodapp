@@ -7,6 +7,9 @@ const counter = document.querySelector(".main__counter");
 const addBtn = document.querySelector(".main__btn-add");
 const deleteBtn = document.querySelector(".main__btn-delete");
 
+let counterCurrentValue = 0;
+counter.innerHTML = counterCurrentValue;
+
 let date = new Date().toLocaleString("pl-PL");
 const key = date.slice(0, 10);
 
@@ -18,16 +21,17 @@ else {
 }
 
 addBtn.addEventListener("click", () => {
-    counter.innerHTML++;
+    counterCurrentValue++;
+    counter.innerHTML = counterCurrentValue;
     localStorage.setItem(key, counter.innerHTML);
 });
 
 deleteBtn.addEventListener("click", () => {
-    if(counter.innerHTML > 0) {
-        counter.innerHTML--;
-        localStorage.setItem(key, counter.innerHTML);
+    if(counterCurrentValue > 0) {
+        counterCurrentValue--;
+        counter.innerHTML = counterCurrentValue;
+        localStorage.setItem(key, counterCurrentValue);
     }
-    else console.log("Już jest zero");
 });
 
 
